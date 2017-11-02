@@ -13,8 +13,8 @@ export class AppComponent {
 
   newTodo: Todo = new Todo();
 
-  // Ask Angular DI system to inject the dependency
-  // associated with the dependency injection token `TodoDataService`
+  // Ask Angular Dependency Injections system to inject the dependency
+  // associated with the token `TodoDataService`
   // and assign it to a property called `todoDataService`
   constructor(private todoDataService: TodoDataService) {
   }
