@@ -7,21 +7,13 @@ import {TodoDataService} from './todo-data.service';
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
-  providers: []
+  providers: [TodoDataService]
 })
 export class AppComponent {
 
-  newTodo: Todo = new Todo();
 
+  constructor(private todoDataService: TodoDataService) {}
 
-  constructor(private todoDataService: TodoDataService) {
-  }
-
-  // No longer needed, now handled by TodoListHeaderComponent
-  // addTodo() {
-  //   this.todoDataService.addTodo(this.newTodo);
-  //   this.newTodo = new Todo();
-  // }
 
   // Add new method to handle event emitted by TodoListHeaderComponent
   onAddTodo(todo: Todo) {
